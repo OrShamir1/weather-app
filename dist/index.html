@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    
+    <input type="text" id="user-input">
+    <button type="button" id="submit" class="btn btn-primary">Submit</button>
+
+      <div id="weather-card-container"></div>
+
+
+
+
+    <script id="weather-card-template" type="text/x-handlebars-template">
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="header card-header"><div>{{name}}</div> <i class="close-button">x</i></div>
+        <div class="card-body">  
+          <p class="card-text">conditon: {{condition}}</p>
+          <img class="picture" src= '{{conditionPic}}'>
+          <p class="card-text">temp: {{temperature}}</p>
+        </div>
+      </div>
+    </script>
+
+
+
+
+    <script src="render.js"></script>
+    <script src="WeatherManager.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    
+}
+#weather-card-container{
+    display: grid;
+}
+.header{
+    display: grid;
+    grid-template-columns: 21fr 1fr;
+}
+i{
+    cursor: pointer;
+}
